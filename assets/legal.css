@@ -1,0 +1,282 @@
+:root {
+--bg: #060b17;
+--panel: #0d1627;
+--panel-2: #111d31;
+--text: #f4f7fb;
+--muted: #a9b5c7;
+--line: rgba(255, 255, 255, 0.12);
+--blue: #80c7ee;
+--blue-2: #2f7fab;
+--yellow: #ffd84d;
+--danger: #ff7676;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+min-height: 100vh;
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+background:
+radial-gradient(circle at top left, rgba(47, 127, 171, 0.22), transparent 32rem),
+radial-gradient(circle at 80% 10%, rgba(120, 135, 160, 0.14), transparent 26rem),
+var(--bg);
+color: var(--text);
+}
+
+a {
+color: inherit;
+}
+
+.wrap {
+width: min(1060px, calc(100% - 34px));
+margin: 0 auto;
+}
+
+.site-header {
+padding: 28px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 18px;
+}
+
+.logo-link {
+display: inline-flex;
+align-items: center;
+}
+
+.logo-link img {
+width: 112px;
+height: 112px;
+object-fit: contain;
+}
+
+.nav {
+display: flex;
+gap: 14px;
+align-items: center;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+
+.nav a {
+color: var(--muted);
+text-decoration: none;
+font-weight: 800;
+font-size: 0.93rem;
+}
+
+.nav a:hover {
+color: var(--text);
+}
+
+.hero {
+padding: 42px 0 26px;
+}
+
+.eyebrow {
+margin: 0 0 12px;
+color: var(--blue);
+text-transform: uppercase;
+letter-spacing: 0.14em;
+font-size: 0.78rem;
+font-weight: 900;
+}
+
+h1 {
+max-width: 900px;
+margin: 0 0 18px;
+font-size: clamp(2.35rem, 6vw, 5rem);
+line-height: 0.98;
+letter-spacing: -0.06em;
+}
+
+.hero p {
+max-width: 780px;
+color: var(--muted);
+font-size: 1.12rem;
+line-height: 1.7;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 18px;
+padding: 24px 0 60px;
+}
+
+.card {
+border: 1px solid var(--line);
+background: linear-gradient(180deg, rgba(17, 29, 49, 0.94), rgba(13, 22, 39, 0.88));
+border-radius: 24px;
+padding: 24px;
+box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+transition: transform 0.18s ease, border-color 0.18s ease;
+text-decoration: none;
+}
+
+.card:hover {
+transform: translateY(-2px);
+border-color: rgba(128, 199, 238, 0.32);
+}
+
+.card h2 {
+margin: 0 0 10px;
+font-size: 1.35rem;
+}
+
+.card p {
+margin: 0 0 18px;
+color: var(--muted);
+line-height: 1.65;
+}
+
+.card span {
+color: var(--blue);
+font-weight: 900;
+}
+
+.notice {
+border: 1px solid rgba(255, 216, 77, 0.35);
+background: rgba(255, 216, 77, 0.08);
+border-radius: 20px;
+padding: 20px;
+margin: 12px 0 56px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.legal-layout {
+display: grid;
+grid-template-columns: 250px minmax(0, 1fr);
+gap: 24px;
+align-items: start;
+padding: 22px 0 60px;
+}
+
+.legal-sidebar {
+position: sticky;
+top: 18px;
+border: 1px solid var(--line);
+background: rgba(13, 22, 39, 0.78);
+border-radius: 22px;
+padding: 18px;
+}
+
+.legal-sidebar p {
+margin: 0 0 14px;
+color: var(--muted);
+font-size: 0.9rem;
+line-height: 1.5;
+}
+
+.legal-sidebar a {
+display: block;
+padding: 9px 0;
+color: var(--muted);
+text-decoration: none;
+font-weight: 800;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legal-sidebar a:hover {
+color: var(--text);
+}
+
+.legal-doc {
+border: 1px solid var(--line);
+background: rgba(13, 22, 39, 0.82);
+border-radius: 28px;
+padding: clamp(22px, 4vw, 42px);
+box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.legal-doc h1 {
+font-size: clamp(2rem, 4vw, 3.6rem);
+margin-bottom: 12px;
+}
+
+.legal-doc h2 {
+margin: 34px 0 10px;
+font-size: 1.42rem;
+}
+
+.legal-doc h3 {
+margin: 24px 0 8px;
+font-size: 1.08rem;
+}
+
+.legal-doc p,
+.legal-doc li {
+color: var(--muted);
+line-height: 1.75;
+font-size: 1rem;
+}
+
+.legal-doc ul {
+padding-left: 22px;
+}
+
+.legal-doc strong {
+color: var(--text);
+}
+
+.updated {
+color: var(--blue);
+font-weight: 900;
+margin-bottom: 26px;
+}
+
+.callout {
+border: 1px solid rgba(128, 199, 238, 0.28);
+background: rgba(128, 199, 238, 0.08);
+border-radius: 18px;
+padding: 16px 18px;
+margin: 22px 0;
+}
+
+.warning {
+border-color: rgba(255, 216, 77, 0.35);
+background: rgba(255, 216, 77, 0.08);
+}
+
+.site-footer {
+border-top: 1px solid var(--line);
+padding: 28px 0 40px;
+color: var(--muted);
+display: flex;
+justify-content: space-between;
+gap: 18px;
+flex-wrap: wrap;
+font-size: 0.92rem;
+}
+
+@media (max-width: 880px) {
+.site-header {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.nav {
+justify-content: flex-start;
+}
+
+.cards {
+grid-template-columns: 1fr;
+}
+
+.legal-layout {
+grid-template-columns: 1fr;
+}
+
+.legal-sidebar {
+position: static;
+}
+}
